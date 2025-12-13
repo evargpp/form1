@@ -8,124 +8,126 @@
 </head>
 
 <body>
-
     <h2>Formularz rezerwacji</h2>
 
-    <div id="errorBox">eb</div>
+    <div class="container">
+        <div id="formularz">
+            <div id="errorBox">eb</div>
 
-    <form id="reservationForm" novalidate>
+            <form id="reservationForm" novalidate>
 
-        <label>
-            Imię i nazwisko:
-            <div class="input-wrapper">
-                <input type="text" id="fullname">
-                <span class="err">*</span>
-            </div>
-        </label>
-        <label>Email:
-            <div class="input-wrapper">
-                <input type="email" id="email">
-                <span class="err">*</span>
-            </div>
-        </label>
+                <label>
+                    Imię i nazwisko:
+                    <div class="input-wrapper">
+                        <input type="text" id="fullname">
+                        <span class="err">*</span>
+                    </div>
+                </label>
+                <label>Email:
+                    <div class="input-wrapper">
+                        <input type="email" id="email">
+                        <span class="err">*</span>
+                    </div>
+                </label>
 
-        <label>Powtórz email:
-            <div class="input-wrapper">
-                <input type="email" id="email2">
-                <span class="err">*</span>
-            </div>
-        </label>
+                <label>Powtórz email:
+                    <div class="input-wrapper">
+                        <input type="email" id="email2">
+                        <span class="err">*</span>
+                    </div>
+                </label>
 
-        <label>Data zameldowania:
-            <div class="input-wrapper">
-                <input type="date" id="checkin">
-                <span class="err">*</span>
-            </div>
-        </label>
+                <label>Data zameldowania:
+                    <div class="input-wrapper">
+                        <input type="date" id="checkin">
+                        <span class="err">*</span>
+                    </div>
+                </label>
 
-        <label>Data wymeldowania:
-            <div class="input-wrapper">
-                <input type="date" id="checkout">
-                <span class="err">*</span>
-            </div>
-        </label>
+                <label>Data wymeldowania:
+                    <div class="input-wrapper">
+                        <input type="date" id="checkout">
+                        <span class="err">*</span>
+                    </div>
+                </label>
 
-        <h3>Adres zamieszkania</h3>
+                <h3>Adres zamieszkania</h3>
 
-        <label>Kraj:
-            <div class="input-wrapper">
-                <input type="text" id="country">
-                <span class="err">*</span>
-            </div>
-        </label>
+                <label>Kraj:
+                    <div class="input-wrapper">
+                        <input type="text" id="country">
+                        <span class="err">*</span>
+                    </div>
+                </label>
 
-        <label>Miasto:
-            <div class="input-wrapper">
-                <input type="text" id="city">
-                <span class="err">*</span>
-            </div>
-        </label>
+                <label>Miasto:
+                    <div class="input-wrapper">
+                        <input type="text" id="city">
+                        <span class="err">*</span>
+                    </div>
+                </label>
 
-        <label>Kod pocztowy:
-            <div class="input-wrapper">
-                <input type="text" id="postcode">
-                <span class="err">*</span>
-            </div>
-        </label>
+                <label>Kod pocztowy:
+                    <div class="input-wrapper">
+                        <input type="text" id="postcode">
+                        <span class="err">*</span>
+                    </div>
+                </label>
 
-        <label>Ulica + nr domu/mieszkania:
-            <div class="input-wrapper">
-                <input type="text" id="street">
-                <span class="err">*</span>
-            </div>
-        </label>
+                <label>Ulica + nr domu/mieszkania:
+                    <div class="input-wrapper">
+                        <input type="text" id="street">
+                        <span class="err">*</span>
+                    </div>
+                </label>
 
-        <h3>Dane karty</h3>
+                <h3>Dane karty</h3>
 
-        <label>Nr karty:
-            <div class="input-wrapper">
-                <input type="text" id="cardnum">
-                <span class="err">*</span>
-            </div>
-        </label>
+                <label>Nr karty:
+                    <div class="input-wrapper">
+                        <input type="text" id="cardnum">
+                        <span class="err">*</span>
+                    </div>
+                </label>
 
-        <label>Ważność (MM/RR):
-            <div class="input-wrapper">
-                <input type="text" id="exp">
-                <span class="err">*</span>
-            </div>
-        </label>
+                <label>Ważność (MM/RR):
+                    <div class="input-wrapper">
+                        <input type="text" id="exp">
+                        <span class="err">*</span>
+                    </div>
+                </label>
 
-        <label>CVV2:
-            <div class="input-wrapper">
-                <input type="text" id="cvv">
-                <span class="err">*</span>
-            </div>
-        </label>
+                <label>CVV2:
+                    <div class="input-wrapper">
+                        <input type="text" id="cvv">
+                        <span class="err">*</span>
+                    </div>
+                </label>
 
-        <button type="submit">Zarejestruj się</button>
-    </form>
+                <button type="submit">Zarejestruj się</button>
+            </form>
+        </div>
 
-    <hr>
 
-    <h2>Osoby towarzyszące</h2>
+        <div id="osoby_towarzyszace">
+            <h2>Osoby towarzyszące</h2>
 
-    <table id="guestTable">
-        <thead>
-            <tr>
-                <th>Imię i nazwisko</th>
-                <th>Wiek</th>
-                <th>Opiekun</th>
-                <th>Akcje</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+            <table id="guestTable">
+                <thead>
+                    <tr>
+                        <th>Imię i nazwisko</th>
+                        <th>Wiek</th>
+                        <th>Opiekun</th>
+                        <th>Akcje</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <p>Liczba osób: <span id="rowCount">0</span></p>
 
-    <p>Liczba osób: <span id="rowCount">0</span></p>
-
-    <button id="addRow">Dodaj osobę</button>
-
+            <button id="addRow">Dodaj osobę</button>
+        </div>
+    </div>
     <script src="script.js"></script>
     <script src="validate.js"></script>
     <script src="validateForm.js"></script>
