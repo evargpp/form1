@@ -18,10 +18,10 @@ const fields = {
 };
 
 // Podłączamy walidację onblur
-for (let id in fields) {
-    console.log(id)
-    document.getElementById(id).addEventListener("blur", e => validateField(id));
-}
+//for (let id in fields) {
+//    console.log(id)
+//    document.getElementById(id).addEventListener("blur", e => validateField(id));
+//}
 
 
 function validateField(id) {
@@ -39,29 +39,6 @@ function validateField(id) {
 //     }
 //
 }
-
-form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    errorBox.innerHTML = "";
-    errorBox.style.display = "none";
-
-    let errors = [];
-
-    for (let id in fields) {
-        if (!validateField(id)) {
-            errors.push(`Pole "${id}" jest niepoprawne.`);
-        }
-    }
-
-    if (errors.length > 0) {
-        errorBox.innerHTML = errors.join("<br>");
-        errorBox.style.display = "block";
-        return;
-    }
-
-    alert("Formularz poprawny. Wysłano!");
-});
 
 // ====================== TABLE =============================
 

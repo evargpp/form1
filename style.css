@@ -103,7 +103,7 @@
      top: 36px
  }
 
- .errors-summary {
+ #errorBox {
      border: 2px solid var(--error-color);
      background: #fff2f2;
      color: var(--error-color);
