@@ -130,7 +130,6 @@ form.addEventListener("submit", function (e) {
     if (errors.length > 0) {
         errorBox.innerHTML = errors.join("<br>");
         errorBox.style.display = "block";
-        console.log(errorBox);
         return;
     }
     alert("Formularz poprawny. Wysłano!");

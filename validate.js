@@ -184,30 +184,32 @@ document.getElementById("cardnum").addEventListener("blur",
         else {
             el.classList.remove('error-border');
             err.style.display = "none";
-        }
 
-        let sum = 0;
-        let shouldDouble = false;
+            let sum = 0;
+            let shouldDouble = false;
 
-        for (let i = num.length - 1; i >= 0; i--) {
-            let digit = parseInt(num[i]);
+            for (let i = num.length - 1; i >= 0; i--) {
+                let digit = parseInt(num[i]);
 
-            if (shouldDouble) {
-                digit *= 2;
-                if (digit > 9) digit -= 9;
+                if (shouldDouble) {
+                    digit *= 2;
+                    if (digit > 9) digit -= 9;
+                }
+
+                sum += digit;
+                shouldDouble = !shouldDouble;
             }
 
-            sum += digit;
-            shouldDouble = !shouldDouble;
+            if (sum % 10 === 0) {
+                el.classList.remove('error-border');
+                err.style.display = "none";
+            } else {
+                el.classList.add('error-border');
+                err.style.display = "block";
+            }
+
         }
 
-        if (sum % 10 === 0) {
-            el.classList.remove('error-border');
-            err.style.display = "none";
-        } else {
-            el.classList.add('error-border');
-            err.style.display = "block";
-        }
 
     }
 );
